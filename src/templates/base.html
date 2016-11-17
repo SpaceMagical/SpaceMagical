@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Space Magical | {% block title %}{% blockend %}</title>
+    <title>Space Magical | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     {% block style %}
     {% endblock %}
   </head>
