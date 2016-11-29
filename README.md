@@ -1,4 +1,4 @@
-#COOPUS
+#SpaceMagical
 
 ##How To
 ```
