@@ -17,11 +17,20 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from rest_framework import routers
+from rest_framework_jwt.views import obtain_jwt_token
+from spaces.serializers import RatingViewSet, SpaceViewSet
 
+router = routers.DefaultRouter()
+router.register(r'spaces', SpaceViewSet)
+router.register(r'ratings', RatingViewSet)
 
 urlpatterns = [
     url(r'', include('welcome.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^api/auth/token/$', obtain_jwt_token),
+    url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/', include(router.urls)),
 ]
 
 if settings.DEBUG:

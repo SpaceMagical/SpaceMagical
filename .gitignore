@@ -92,3 +92,6 @@ ENV/
 # for django migrations
 .sqlite3
 migrations/
+
+# unique in this project
+static_in_env/

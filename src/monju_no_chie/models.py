@@ -5,12 +5,12 @@ from spaces.models import Space
 
 class MonjuNoChie(models.Model):
 
-    user = models.ForeignKey(User)
-    content = models.TextField()
-    space = models.ForeignKey(Space)
-    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
-    num_viewed = models.PositiveIntegerField()
-    is_active = models.BooleanField(default=True)
+    user        = models.ForeignKey(User)
+    content     = models.TextField()
+    space       = models.ForeignKey(Space)
+    timestamp   = models.DateTimeField(auto_now_add=True, auto_now=False)
+    num_viewed  = models.PositiveIntegerField()
+    is_active   = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)
     
     
