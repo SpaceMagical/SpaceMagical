@@ -13,7 +13,7 @@ class Space(models.Model):
     city = models.CharField(max_length=120, blank=False, null=False)
     address = models.CharField(max_length=120, blank=False, null=False)
     date_added = models.DateTimeField(auto_now_add=True, auto_now=False)
-    is_active = models.CharField(default=True)
+    is_active = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)
     is_ours = models.BooleanField(default=False)
     
@@ -35,7 +35,7 @@ class SpaceImages(models.Model):
 
     space = models.ForeignKey(Space)
     image = models.ImageField(upload_to=space_image_upload_to)
-    is_shown = models.BooleanField(defualt=True)
+    is_shown = models.BooleanField(default=True)
 
     def __str__(self):
         return self.space.name

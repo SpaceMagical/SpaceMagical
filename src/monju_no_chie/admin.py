@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import MonjuNoChie
 
-# Register your models here.
+
+class MonjuNoChieAdmin(admin.ModelAdmin):
+
+    class Meta:
+        model = MonjuNoChie
+
+
+admin.site.register(MonjuNoChie, MonjuNoChieAdmin)

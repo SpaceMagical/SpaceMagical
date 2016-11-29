@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #third-party apps
     #our apps
+    'accounts',
+    'connections',
+    'monju_no_chie',
+    'spaces'
 ]
 
 MIDDLEWARE = [

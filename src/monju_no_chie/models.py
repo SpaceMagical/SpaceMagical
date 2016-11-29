@@ -3,7 +3,7 @@ from django.db import models
 from spaces.models import Space
 
 
-class Help(models.Model):
+class MonjuNoChie(models.Model):
 
     user = models.ForeignKey(User)
     content = models.TextField()
