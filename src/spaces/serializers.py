@@ -9,7 +9,7 @@ class RatingSerializer(serializers.HyperlinkedModelSerializer):
 
     user  = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     space = serializers.PrimaryKeyRelatedField(queryset=Space.objects.all())
-    
+
     class Meta:
         model  = Rating
         fields = [
