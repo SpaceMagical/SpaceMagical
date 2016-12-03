@@ -23,7 +23,7 @@ class Space(models.Model):
     # def get_absolute_url(self):
     #     pass
 
-    
+
 def space_image_upload_to(instance, filename):
     space_id = instance.space.id
     basename, file_extension = filename.split(".")

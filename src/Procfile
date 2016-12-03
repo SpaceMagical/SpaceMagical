@@ -1,0 +1,1 @@
+web: gunicorn spacemagical.settings.wsgi --log-file -
