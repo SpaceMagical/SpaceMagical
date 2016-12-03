@@ -7,7 +7,7 @@ except:
     pass
 
 try:
-    from .remote import *
+    from .production import *
 except:
     pass
 

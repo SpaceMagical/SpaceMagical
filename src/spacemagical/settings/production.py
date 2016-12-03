@@ -27,11 +27,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['spacemagical.herokuapp.com']
 
-EMAIL_HOST = 'localhost' # 'smtp.gmail.com'
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 1025 # 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = 'hirotoaoki1349@gmail.com'
+#EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 INSTALLED_APPS = [
@@ -91,6 +91,9 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
