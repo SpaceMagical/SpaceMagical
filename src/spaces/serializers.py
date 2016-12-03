@@ -24,8 +24,11 @@ class RatingSerializer(serializers.HyperlinkedModelSerializer):
 
 class RatingViewSet(viewsets.ModelViewSet):
 
-    queryset         = Rating.objects.all()
-    serializer_class = RatingSerializer
+    authentication_classes = [SessionAuthentication,
+                              BasicAuthentication,
+                              JSONWebTokenAuthentication]
+    queryset               = Rating.objects.all()
+    serializer_class       = RatingSerializer
 
 
 class SpaceSerializer(serializers.HyperlinkedModelSerializer):
@@ -45,6 +48,7 @@ class SpaceSerializer(serializers.HyperlinkedModelSerializer):
             'date_added',
             'is_featured',
             'is_ours',
+            'rating_set',
         ]
 
 
